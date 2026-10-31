@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@keyframes radarSweep {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes signalWave {
+  0% { opacity: 0.8; transform: scale(0.3); }
+  100% { opacity: 0; transform: scale(1.5); }
+}
+
+@keyframes scanLine {
+  0% { opacity: 0.6; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(0, 255, 136, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(0, 255, 136, 0.6); }
+}
+
+.radar-sweep {
+  animation: radarSweep 4s linear infinite;
+}
+
+.pulse-ring {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.signal-wave {
+  animation: signalWave 2s ease-out infinite;
+}
+
+.scan-line {
+  animation: scanLine 1s ease-out forwards;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.glow-effect {
+  animation: glow 2s ease-in-out infinite;
+}
+
+body {
+  background: #0a0a0f;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff88;
+  border-radius: 3px;
+}
